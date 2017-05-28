@@ -119,10 +119,14 @@ void DoDelete() {
 			strcpy(output, TimeCodeDelete());
 			ExecQuery(output);
 		}
-		else if (sel == 5) {	// Work time table delete
+		else if (sel == 5) {	// Input Raw Query
+			printf("Input Raw Query : ");
+			scanf("%[^\n]", raw);
+			MyGetChar();
+			ExecQuery(raw);
 		}
 		else if (sel == 6) {
-			printf("Exit Insert mode!!\n\n");
+			printf("Exit Delete mode!!\n\n");
 			break;
 		}
 		else {

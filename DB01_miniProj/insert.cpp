@@ -97,7 +97,7 @@ char * NewOffice() {
 
 	return output;
 }
-
+// New Task
 char * NewTask() {
 	char Task[2][20] = { NULL };
 	char output[200] = "insert into TASK values(";
@@ -134,7 +134,7 @@ char * NewTimeTable() {
 	char output[200] = "insert into BE_ASSIGNED values(";
 	char yesorno;
 
-	NewTaskMenu();
+	NewTimeTableMenu();
 	while (1) {
 		printf("(Check existing values? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();

@@ -143,6 +143,14 @@ void NewTaskMenu() {
 	printf("===  2. Task Name(char)          ===\n");
 	printf("====================================\n");
 }
+void NewTimeTableMenu() {
+	printf("====================================\n");
+	printf("===  New Time Table Add(Schema)  ===\n");
+	printf("====================================\n");
+	printf("===  1. TASKID(PK, FK, int)      ===\n");
+	printf("===  2. TMCODE(PK, FK, char)     ===\n");
+	printf("====================================\n");
+	}
 void NewRegionMenu() {
 	printf("====================================\n");
 	printf("===  New Region Add(Schema)      ===\n");
@@ -151,8 +159,8 @@ void NewRegionMenu() {
 	printf("===  2. Region Name(char)        ===\n");
 	printf("===  3. Population(int)          ===\n");
 	printf("====================================\n");
-
 }
+
 // Update Main Menu
 void UpdateMainMenu() {
 	printf("====================================\n");
@@ -169,7 +177,7 @@ void UpdateMainMenu() {
 	printf("====================================\n");
 }
 
-// Update Main Menu
+// Delete Main Menu
 void DeleteMainMenu() {
 	printf("====================================\n");
 	printf("=========== D E L E T E ============\n");
@@ -178,7 +186,7 @@ void DeleteMainMenu() {
 	printf("===  2. Office Close             ===\n");
 	printf("===  3. Task delete              ===\n");
 	printf("===  4. Time code delete         ===\n");
-	printf("===  5. Work Time Table delete   ===\n");
+	printf("===  5. Input Raw Query          ===\n");
 	printf("===  6. Exit                     ===\n");
 	printf("====================================\n");
 	printf("====================================\n");

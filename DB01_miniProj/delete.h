@@ -8,6 +8,7 @@ char * OfficerRetire();
 char * OfficeClose();
 char * TaskDelete();
 char * TimeCodeDelete();
+char * WorkTableDelete();
 
 void DoDelete();
 

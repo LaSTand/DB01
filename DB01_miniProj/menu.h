@@ -18,6 +18,7 @@ void InsertMainMenu();
 void NewOfficerMenu();
 void NewOfficeMenu();
 void NewTaskMenu();
+void NewTimeTableMenu();
 void NewRegionMenu();
 
 void UpdateMainMenu();
