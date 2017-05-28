@@ -8,7 +8,7 @@
 
 /*  경찰관 검색  */
 char * SelectOfficer() {
-	char Police[2][25];
+	char Police[2][25] = { NULL };
 	char output[200] = "select * from POLICE";
 	int sel;
 
@@ -30,7 +30,7 @@ char * SelectOfficer() {
 		// Search with police officer's name
 		else if (sel == 2) {
 			printf("Input Officer Name : ");
-			scanf("%s", Police[1]);
+			scanf("%[^\n]", Police[1]);
 			MyGetChar();
 			strcat(output, " where POLNAME = '");
 			strcat(output, Police[1]);
@@ -49,7 +49,7 @@ char * SelectOfficer() {
 
 /*  경찰서 검색  */
 char * SelectPolOffice() {
-	char Office[3][20];
+	char Office[3][20] = { NULL };
 	char output[200] = "select * from POL_OFFICE";
 	int sel;
 
@@ -91,7 +91,7 @@ char * SelectPolOffice() {
 }
 /*  업무 목록 검색  */
 char * SelectTask() {
-	char Task[2][30];
+	char Task[2][30] = { NULL };
 	char output[200] = "select * from TASK";
 	int sel;
 
@@ -120,7 +120,7 @@ char * SelectTask() {
 }
 /*  시간 코드 검색  */
 char * SelectTime() {
-	char Time[10];
+	char Time[10] = { NULL };
 	char output[200] = "select * from WORKTIME";
 	int sel;
 
@@ -152,7 +152,7 @@ char * SelectTime() {
  => 2개 테이블 조인
  */
 char * SelectOfficeManager() {
-	char OfficeId[10];
+	char OfficeId[10] = { NULL };
 	char output[200] = "select OFFID, POLID, POLNAME, CITY, GU from POLICE P, POL_OFFICE O where P.POLID=O.MANAGER";
 	int sel;
 
@@ -184,7 +184,7 @@ char * SelectOfficeManager() {
  => 3개 테이블 조인
  */
 char * SelectRegionInfo() {
-	char OfficeId[10];
+	char OfficeId[10] = { NULL };
 	char output1[200] = "select * from REGION";
 	char output2[200] = "select R.OFFID, O.CITY, O.GU, R.POPUL, P.POLNAME, P.TITLE from REGION R, POL_OFFICE O, POLICE P where R.OFFID = O.OFFID and O.MANAGER = P.POLID";
 	int sel;
@@ -218,8 +218,8 @@ char * SelectRegionInfo() {
 }
 /*  업무 시간표, 담당자 검색  */
 char * SelectWorkInfo() {
-	char polid[10];
-	char taskname[30];
+	char polid[10] = { NULL };
+	char taskname[30] = { NULL };
 	char output[200] = "select P.POLID, P.POLNAME, P.TITLE, T.TASKNAME from POLICE P, TASK T, WORK W where P.POLID=W.POLID and T.TASKID=W.TASKID ";
 	char output1[200] = "select T.TASKNAME, TM.TIMECODE, TM.START, TM.ENDT from TASK T, WORKTIME TM, BE_ASSIGNED A where T.TASKID=A.TSKID and TM.TIMECODE=A.TMCODE ";
 	int sel;
@@ -260,7 +260,7 @@ char * SelectWorkInfo() {
 
 /*  Select Statement handle  */
 void DoSelect() {
-	char input[200];	// for raw query
+	char input[200] = { NULL };	// for raw query
 	char output[200];
 	int sel;
 

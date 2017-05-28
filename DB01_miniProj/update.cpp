@@ -4,7 +4,7 @@
 
 // A officer promotion
 char * OfficerPromotion() {
-	char Police[2][25];
+	char Police[2][25] = { NULL };
 	char output[200] = "update POLICE set TITLE = '";
 	char yesorno;
 
@@ -29,7 +29,7 @@ char * OfficerPromotion() {
 }
 // Officer Transfer
 char * OfficerTransfer() {
-	char Police[2][25];
+	char Police[2][25] = { NULL };
 	char output[200] = "update POLICE set OFFICE = '";
 	char yesorno;
 
@@ -60,7 +60,7 @@ char * OfficerTransfer() {
 }
 // Office manager change
 char * ManagerChange() {
-	char Office[2][25];
+	char Office[2][25] = { NULL };
 	char output[200] = "update POL_OFFICE set MANAGER = ";
 	char yesorno;
 
@@ -91,7 +91,7 @@ char * ManagerChange() {
 }
 // Assigned work change
 char * AssignedWorkChange() {
-	char Work[3][20];
+	char Work[3][20] = { NULL };
 	char output[200] = "update WORK set TASKID = ";
 	char yesorno;
 
@@ -125,7 +125,7 @@ char * AssignedWorkChange() {
 }
 // Work time chanage
 char * WorkTimeChange() {
-	char Time[3][20];
+	char Time[3][20] = { NULL };
 	char output[200] = "update WORKTIME set START = ";
 	char yesorno;
 
@@ -155,7 +155,7 @@ char * WorkTimeChange() {
 }
 
 void DoUpdate() {
-	char input[200];	// for raw query
+	char input[200] = { NULL };	// for raw query
 	char output[200];
 	int sel;
 	while (1) {

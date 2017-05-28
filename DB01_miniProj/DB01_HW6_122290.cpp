@@ -9,10 +9,10 @@ DB01_HW5_122290.cpp
 #include "select.h"
 #include "insert.h"
 #include "update.h"
+#include "delete.h"
 
 int main(int argc, char *argv[])
 {
-	char str[200];
 	int sel;
 	if (DBConnect() == true)
 	{
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 				DoUpdate();
 			}
 			else if (sel == 4) {	// delete
-				// not yet
+				DoDelete();
 			}
 			else if (sel == 5) {	// Show Schema
 				PrintSchema();

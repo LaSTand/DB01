@@ -22,7 +22,7 @@ void NewRegionMenu();
 
 void UpdateMainMenu();
 
-
+void DeleteMainMenu();
 
 void PrintSchema();
 

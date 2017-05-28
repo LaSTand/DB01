@@ -153,7 +153,7 @@ void NewRegionMenu() {
 	printf("====================================\n");
 
 }
-
+// Update Main Menu
 void UpdateMainMenu() {
 	printf("====================================\n");
 	printf("=========== U P D A T E ============\n");
@@ -165,6 +165,21 @@ void UpdateMainMenu() {
 	printf("===  5. Time Table Change        ===\n");
 	printf("===  6. Input Raw Query          ===\n");
 	printf("===  7. Exit                     ===\n");
+	printf("====================================\n");
+	printf("====================================\n");
+}
+
+// Update Main Menu
+void DeleteMainMenu() {
+	printf("====================================\n");
+	printf("=========== D E L E T E ============\n");
+	printf("====================================\n");
+	printf("===  1. Officer Retire           ===\n");
+	printf("===  2. Office Close             ===\n");
+	printf("===  3. Task delete              ===\n");
+	printf("===  4. Time code delete         ===\n");
+	printf("===  5. Work Time Table delete   ===\n");
+	printf("===  6. Exit                     ===\n");
 	printf("====================================\n");
 	printf("====================================\n");
 }

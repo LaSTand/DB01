@@ -87,13 +87,13 @@ int ExecQuery(char * input) {
 	}
 	return 0;
 }
-
+// like fflush 
 void MyGetChar() {
 	char c;
 	while ((c = getchar()) != '\n' && c != EOF)
 		;
 }
-
+// Simple Select Query function
 void CheckExistingValues(char * tbl_name, char * col_name) {
 	char chk_query[200] = "select distinct ";
 

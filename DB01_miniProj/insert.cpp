@@ -7,7 +7,7 @@ insert 쿼리문을 처리
 
 // New Officer
 char * NewOfficer() {
-	char Police[4][25];
+	char Police[4][25] = { NULL };
 	char output[200] = "insert into POLICE values(";
 	char yesorno;
 	
@@ -55,7 +55,7 @@ char * NewOfficer() {
 }
 // New Office
 char * NewOffice() {
-	char Office[5][20];
+	char Office[5][20] = { NULL };
 	char output[200] = "insert into POL_OFFICE values(";
 	char yesorno;
 
@@ -89,17 +89,17 @@ char * NewOffice() {
 	strcat(output, Office[1]);
 	strcat(output, "','");
 	strcat(output, Office[2]);
-	strcat(output, "',");
+	strcat(output, "','");
 	strcat(output, Office[3]);
 	strcat(output, "',");
 	strcat(output, Office[4]);
 	strcat(output, ")");
-	printf("%s\n", output);
+
 	return output;
 }
 
 char * NewTask() {
-	char Task[2][20];
+	char Task[2][20] = { NULL };
 	char output[200] = "insert into TASK values(";
 	char yesorno;
 
@@ -130,7 +130,7 @@ char * NewTask() {
 }
 // New Work Assigning
 char * NewTimeTable() {
-	char Beassign[2][20];
+	char Beassign[2][20] = { NULL };
 	char output[200] = "insert into BE_ASSIGNED values(";
 	char yesorno;
 
@@ -165,7 +165,7 @@ char * NewTimeTable() {
 }
 // New Region
 char * NewRegion() {
-	char Region[3][20];
+	char Region[3][20] = { NULL };
 	char output[200] = "insert into REGION values(";
 	char yesorno;
 
@@ -201,7 +201,7 @@ char * NewRegion() {
 
 /*  Insert Statement handle  */
 void DoInsert() {
-	char raw[200];
+	char raw[200] = { NULL };
 	char output[200];
 	int sel;
 
