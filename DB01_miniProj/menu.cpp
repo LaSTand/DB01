@@ -186,8 +186,9 @@ void DeleteMainMenu() {
 	printf("===  2. Office Close             ===\n");
 	printf("===  3. Task delete              ===\n");
 	printf("===  4. Time code delete         ===\n");
-	printf("===  5. Input Raw Query          ===\n");
-	printf("===  6. Exit                     ===\n");
+	printf("===  5. Assigned Task delete     ===\n");
+	printf("===  6. Input Raw Query          ===\n");
+	printf("===  7. Exit                     ===\n");
 	printf("====================================\n");
 	printf("====================================\n");
 }

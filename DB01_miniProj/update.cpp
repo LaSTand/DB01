@@ -30,7 +30,7 @@ char * OfficerPromotion() {
 // Officer Transfer
 char * OfficerTransfer() {
 	char Police[2][25] = { NULL };
-	char output[200] = "update POLICE set OFFICE = '";
+	char output[200] = "update POLICE set OFFICE = ";
 	char yesorno;
 
 	printf("=========  POLICE OFFICER  ========\n");
@@ -53,7 +53,7 @@ char * OfficerTransfer() {
 		break;
 	}
 	strcat(output, Police[1]);
-	strcat(output, "' where POLID = ");
+	strcat(output, " where POLID = ");
 	strcat(output, Police[0]);
 	
 	return output;
@@ -127,7 +127,6 @@ char * AssignedWorkChange() {
 char * WorkTimeChange() {
 	char Time[3][20] = { NULL };
 	char output[200] = "update WORKTIME set START = ";
-	char yesorno;
 
 	printf("=========   Work Time   ========\n");
 	CheckExistingValues("WORKTIME", "*");

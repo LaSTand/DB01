@@ -77,10 +77,10 @@ char * NewOffice() {
 		printf("Input Manager's Police ID\n");
 		printf("(Check existing values? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();
-		if (yesorno == 'y') {
-			CheckExistingValues("POLICE where TITLE='Inspector'", "POLID");
+		if (yesorno == 'y' || yesorno == 'Y') {
+			CheckExistingValues("POLICE where TITLE='Inspector'", "*");
 		}
-		printf("Input Manager's Police ID\n");
+		printf("Input Manager's Police ID : ");
 		scanf("%[^\n]", Office[4]);	MyGetChar();
 		break;
 	}
@@ -108,7 +108,7 @@ char * NewTask() {
 		printf("Input Task ID\n");
 		printf("(Check existing values? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();
-		if (yesorno == 'y') {
+		if (yesorno == 'y' || yesorno == 'Y') {
 			CheckExistingValues("TASK", "TASKID");
 		}
 		printf("Input Task ID : ");
@@ -138,7 +138,7 @@ char * NewTimeTable() {
 	while (1) {
 		printf("(Check existing values? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();
-		if (yesorno == 'y') {
+		if (yesorno == 'y' || yesorno == 'Y') {
 			CheckExistingValues("BE_ASSIGNED", "*");
 		}
 		printf("Input Task ID : ");
@@ -146,7 +146,7 @@ char * NewTimeTable() {
 		printf("Input Time Code : \n");
 		printf("(Check Time Code Info? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();
-		if (yesorno == 'y') {
+		if (yesorno == 'y' || yesorno == 'Y') {
 			CheckExistingValues("WORKTIME", "*");
 		}
 		printf("Input Time Code : ");
@@ -174,7 +174,7 @@ char * NewRegion() {
 		printf("Input Office ID \n");
 		printf("(Check existing values? y/n ) : ");
 		scanf("%c", &yesorno);	MyGetChar();
-		if (yesorno == 'y') {
+		if (yesorno == 'y' || yesorno == 'Y') {
 			CheckExistingValues("POL_OFFICE", "OFFID, CITY, GU");
 		}
 		printf("Input Office ID : ");
